@@ -1,0 +1,275 @@
+{
+  "schemaVersion": "1.0.0",
+  "personalInfo": {
+    "fullName": "Mohammad Sabbir Sikder",
+    "displayName": "Sabbir Sikder",
+    "location": "Bangladesh",
+    "email": "mdsabbirh083@mail.com",
+    "professionalTitles": [
+      "Software Engineer",
+      "Full-Stack Web Developer",
+      "JavaScript and TypeScript Enthusiast"
+    ],
+    "headline": "Building practical web applications with modern frontend and backend technologies.",
+    "profileImage": null,
+    "bannerImage": "https://raw.githubusercontent.com/sabbircodeh083/sabbircodeh083/main/banner.png",
+    "resumeUrl": "https://drive.google.com/file/d/1CImSAT0XllvDbtcoUlu80-MnBDTzUdEx/view?usp=sharing"
+  },
+  "about": {
+    "summary": "I'm a Software Engineering student specializing in MERN Stack Development, passionate about building modern, responsive, and user-friendly web applications. I enjoy solving real-world problems through code and transforming ideas into practical software solutions.My primary focus is full-stack web development using MongoDB, Express.js, React.js, and Node.js. I'm continuously improving my skills in frontend development, backend API development, database management, and building scalable web applications.",
+    "interests": [
+      "Full-stack web development",
+      "Modern frontend development",
+      "Backend development and APIs",
+      "Database development",
+      "Learning new technologies"
+    ],
+    "currentlyLearningOrImproving": [
+      "React",
+      "Next.js",
+      "Node.js",
+      "TypeScript",
+      "Database development"
+    ]
+  },
+  "contact": {
+    "email": "mdsabbirh083@mail.com",
+    "message": "You can reach me through email or my social profiles."
+  },
+  "socialLinks": {
+    "github": {
+      "label": "GitHub",
+      "username": "sabbircodeh083",
+      "url": "https://github.com/sabbircodeh083"
+    },
+    "linkedin": {
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/mdsabbirh083"
+    },
+    "devCommunity": {
+      "label": "DEV Community",
+      "username": "sabbircodeh083",
+      "url": "https://dev.to/sabbircodeh083"
+    },
+    "discord": {
+      "label": "Discord",
+      "url": "https://discord.gg/sabbir#7377"
+    }
+  },
+  "education": [
+    {
+      "institution": "American International University-Bangladesh (AIUB)",
+      "degree": "Bachelor of Science in Computer Science and Engineering",
+      "location": "Dhaka, Bangladesh",
+      "startYear": 2022,
+      "endYear": 2025,
+      "cgpa": 3.92
+    },
+    {
+      "institution": "BAF Shaheen College Paharkanchonpur",
+      "qualification": "Higher Secondary Certificate (HSC)",
+      "location": "Bangladesh",
+      "startYear": 2018,
+      "endYear": 2020,
+      "gpa": 4.88
+    },
+    {
+      "institution": "Sristy Academic School and College",
+      "qualification": "Secondary School Certificate (SSC)",
+      "location": "Tangail, Bangladesh",
+      "startYear": 2016,
+      "endYear": 2018,
+      "gpa": 4.78
+    }
+  ],
+  "skills": {
+    "programmingLanguages": [
+      "C",
+      "C++",
+      "C#",
+      "Java",
+      "PHP",
+      "Python",
+      "JavaScript",
+      "TypeScript"
+    ],
+    "frontendFrameworksAndLibraries": [
+      "React",
+      "Next.js",
+      "Vue",
+      "Tailwind CSS",
+      "Bootstrap",
+      "DaisyUI",
+      "React Toastify",
+      "HTML",
+      "CSS"
+    ],
+    "backendFrameworksAndRuntime": [
+      "Node.js",
+      "Express.js",
+      ".NET",
+      "Laravel",
+      "Symfony",
+      "Better Auth"
+    ],
+    "databasesAndBackendServices": [
+      "MongoDB",
+      "PostgreSQL",
+      "MySQL",
+      "Oracle",
+      "Firebase"
+    ],
+    "cloudDeploymentAndDevOps": [
+      "AWS",
+      "Docker",
+      "Vercel",
+      "Netlify",
+      "Linux",
+      "Ubuntu"
+    ],
+    "toolsAndDesign": [
+      "Git",
+      "GitHub",
+      "Visual Studio Code",
+      "Postman",
+      "Figma"
+    ],
+    "additionalTechnologies": ["Solidity", "Hardhat", "Selenium", "PyTorch"]
+  },
+  "projects": [
+    {
+      "id": "bazar-dor",
+      "name": "\u09ac\u09be\u099c\u09be\u09b0 \u09a6\u09b0 (BazarDor)",
+      "shortName": "BazarDor",
+      "category": "Market-price web application",
+      "description": "A responsive Bangla market-price web application that helps users explore everyday product prices, compare market rates, and see price changes at a glance. It supports mobile, tablet, and desktop layouts and presents prices using Bengali numerals.",
+      "tagline": "\u09ac\u09be\u099c\u09be\u09b0 \u09a6\u09b0 \u2014 \u09aa\u09cd\u09b0\u09af\u09bc\u09cb\u099c\u09a8\u09c0\u09af\u09bc \u09aa\u09a3\u09cd\u09af\u09c7\u09b0 \u09a6\u09be\u09ae \u098f\u0995 \u09a8\u099c\u09b0\u09c7\u0964",
+      "liveUrl": "https://bazar-dor-eight-omega.vercel.app",
+      "githubLink": "https://github.com/sabbircodeh083/Bazar-Dor",
+      "repositoryUrl": null,
+      "technologies": [
+        "Next.js App Router",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Better Auth",
+        "React Toastify",
+        "Vercel"
+      ],
+      "features": [
+        "Responsive layouts for mobile, tablet, and desktop",
+        "Home-page sections for products whose prices have increased or decreased, plus the full product list",
+        "Product cards showing illustrations, Bengali names, units, current prices, and percentage changes",
+        "Product details with minimum, maximum, and average prices and market-wise prices",
+        "Category-based product browsing",
+        "Sorting by default order, lowest price, or highest price",
+        "Bengali numeral formatting for prices",
+        "Email/password registration and sign-in",
+        "Google and GitHub social sign-in when configured",
+        "Protected pages for authenticated users where required",
+        "Profile viewing and name updates",
+        "Toast notifications for authentication, validation, and other actions",
+        "Loading skeletons while data is fetched",
+        "Friendly not-found handling for invalid routes or missing products and categories",
+        "SEO page titles and descriptions through Next.js metadata"
+      ],
+      "routesDocumentedInReadme": [
+        "/",
+        "/category/[categoryName]",
+        "/product/[slug]",
+        "/signin",
+        "/signup",
+        "/profile"
+      ],
+      "integrations": {
+        "authentication": "Better Auth",
+        "socialProviders": ["Google", "GitHub"],
+        "productApiEnvironmentVariable": "ATL_API",
+        "databaseConnectionEnvironmentVariable": "DATABASE_URL"
+      },
+      "notes": [
+        "The README lists ATL_API and DATABASE_URL as environment-variable examples; the actual service and database engine are not specified there.",
+        "Displayed prices are indicative and may vary depending on the market and current conditions.",
+        "OAuth credentials, database credentials, and other secrets should be configured in environment variables and must not be committed to the repository."
+      ],
+      "setupCommands": [
+        "npm install",
+        "npm run dev",
+        "npm run build",
+        "npm run start"
+      ]
+    },
+    {
+      "id": "fitlog",
+      "name": "FitLog",
+      "category": "Workout planner and exercise management",
+      "description": "A workout planner for browsing exercises and organizing a daily routine. Users can review exercise details, add exercises to today's plan, save exercises for later, and track estimated workout time and calories.",
+      "liveUrl": "https://fitlog-rho-flame.vercel.app/",
+      "githubLink": "https://github.com/sabbircodeh083/fitlog",
+      "repositoryUrl": null,
+      "technologies": [
+        "Next.js",
+        "React",
+        "JavaScript",
+        "JSX",
+        "Tailwind CSS",
+        "DaisyUI",
+        "React Toastify",
+        "Vercel"
+      ],
+      "features": [
+        "Browse an exercise library with descriptions, instructions, equipment, difficulty, sets, reps, duration, calories, and ratings",
+        "Add exercises to today's plan",
+        "Save exercises for later",
+        "View exercise totals, calorie totals, and total duration for the selected list",
+        "Sort planned and saved exercises by duration, calories, or rating",
+        "Remove exercises from either list",
+        "Display toast notifications for list actions"
+      ],
+      "dataSource": {
+        "type": "External API",
+        "url": "https://api.abcz.workers.dev/api/fitlog",
+        "notes": "The README states that the app does not currently have a local exercise database."
+      },
+      "stateManagement": {
+        "technology": "React Context",
+        "persistence": "Plan and saved-list data remain in memory while the application is running and are not persisted across page reloads."
+      },
+      "projectStructure": {
+        "src/app/": "App Router pages and global styles",
+        "src/components/": "Exercise, plan, navigation, and footer components",
+        "src/Contexts/": "Shared exercise-plan state"
+      },
+      "setupCommands": [
+        "npm install",
+        "npm run dev",
+        "npm run build",
+        "npm start",
+        "npm run lint"
+      ]
+    }
+  ],
+  "experience": [],
+  "certifications": [],
+  "achievements": [],
+  "contentLinks": {
+    "devPosts": "https://dev.to/sabbircodeh083",
+    "resume": "https://drive.google.com/file/d/1CImSAT0XllvDbtcoUlu80-MnBDTzUdEx/view?usp=sharing"
+  },
+  "githubProfileWidgets": {
+    "contributionSnake": "https://raw.githubusercontent.com/sabbircodeh083/sabbircodeh083/output/github-contribution-grid-snake.svg",
+    "statistics": "https://github-readme-stats.vercel.app/api?username=sabbircodeh083&show_icons=true&theme=swift&hide_border=true",
+    "topLanguages": "https://github-readme-stats.vercel.app/api/top-langs/?username=sabbircodeh083&layout=compact&theme=swift&hide_border=true",
+    "contributionStreak": "https://streak-stats.demolab.com/?user=sabbircodeh083&theme=swift&hide_border=true",
+    "randomDeveloperQuote": "https://quotes-github-readme.vercel.app/api?type=vertical&theme=light",
+    "profileViews": "https://komarev.com/ghpvc/?username=sabbircodeh083&label=Profile%20views&color=0e75b6&style=flat"
+  },
+  "portfolioPreferences": {
+    "primaryLanguage": "en",
+    "additionalLanguage": "bn",
+    "showResumeLink": true,
+    "showSocialLinks": true,
+    "showProjectLiveLinks": true,
+    "showGitHubStatistics": true
+  }
+}
