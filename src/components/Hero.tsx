@@ -7,7 +7,7 @@ import {
   portfolioPreferences,
   projects,
 } from "@/lib/portfolio";
-import { getSkillIcon } from "@/lib/skillIcons";
+import { getSkillBrand } from "@/lib/skillIcons";
 import SocialLinks from "./SocialLinks";
 
 const floatingSkills = [
@@ -133,14 +133,15 @@ export default function Hero() {
           </div>
 
           {floatingSkills.map((skill, index) => {
-            const Icon = getSkillIcon(skill);
+            const { Icon, style } = getSkillBrand(skill);
             return (
               <span
                 key={skill}
                 title={skill}
-                className={`skill-float absolute z-20 hidden h-11 w-11 items-center justify-center rounded-xl border border-border bg-card text-accent shadow-lg sm:flex ${chipPositions[index]}`}
+                className={`skill-float absolute z-20 hidden h-11 w-11 items-center justify-center rounded-xl shadow-lg sm:flex ${chipPositions[index]}`}
                 style={
                   {
+                    ...style,
                     "--float-duration": `${5 + index * 0.4}s`,
                     "--float-delay": `${index * 0.3}s`,
                   } as CSSProperties

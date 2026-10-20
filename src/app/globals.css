@@ -66,6 +66,16 @@ section[id] {
   scroll-margin-top: 5rem;
 }
 
+/* Hide the scrollbar on the horizontally scrolling skills tab strip. */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 /* ---- Animations ---------------------------------------------------------- */
 
 @keyframes float-slow {
@@ -103,6 +113,37 @@ section[id] {
 
 .animate-fade-up {
   animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Skills panel sliding in from the swipe/tap direction. */
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 /* Floating skill icons around the hero portrait. */
@@ -170,8 +211,14 @@ section[id] {
   }
 
   .animate-fade-up,
+  .animate-slide-in-left,
+  .animate-slide-in-right,
   .gradient-text {
     animation: none;
+  }
+
+  .no-scrollbar {
+    scroll-behavior: auto;
   }
 
   /*

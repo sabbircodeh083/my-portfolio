@@ -84,14 +84,13 @@
   ],
   "skills": {
     "programmingLanguages": [
+      "JavaScript",
+      "TypeScript",
       "C",
       "C++",
       "C#",
-      "Java",
       "PHP",
-      "Python",
-      "JavaScript",
-      "TypeScript"
+      "Python"
     ],
     "frontendFrameworksAndLibraries": [
       "React",
@@ -108,7 +107,6 @@
       "Node.js",
       "Express.js",
       ".NET",
-      "Laravel",
       "Symfony",
       "Better Auth"
     ],
