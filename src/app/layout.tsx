@@ -22,6 +22,9 @@ export const metadata: Metadata = {
     personalInfo.displayName,
     ...personalInfo.professionalTitles,
   ],
+  // Empty icon: keeps browsers from falling back to `/favicon.ico` (and from
+  // showing a previously cached one) now that the site has no favicon.
+  icons: { icon: "data:," },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

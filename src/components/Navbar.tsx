@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FaBars, FaDownload, FaXmark } from "react-icons/fa6";
 import { navItems, personalInfo } from "@/lib/portfolio";
@@ -49,9 +50,13 @@ export default function Navbar() {
           href="#top"
           className="flex text-lg items-center gap-2  font-bold tracking-tight"
         >
-          <span
-            aria-hidden
-            className="h-2.5 w-2.5  rounded-full bg-linear-to-br from-accent via-accent-2 to-accent-3"
+          <Image
+            src="/portfolio.png"
+            alt=""
+            width={64}
+            height={64}
+            loading="eager"
+            className="h-8 w-8 shrink-0 rounded-full bg-accent-soft object-cover object-top ring-1 ring-border"
           />
           {personalInfo.displayName}
         </a>

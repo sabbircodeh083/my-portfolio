@@ -46,10 +46,6 @@ export default function Hero() {
       id="top"
       className="relative overflow-hidden pt-28 pb-16 sm:pt-32 md:pb-24"
     >
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="bg-grid absolute inset-0" />
-      </div>
-
       <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 md:grid-cols-2">
         <div className="animate-fade-up">
           <p className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3.5 py-1.5 text-sm text-muted-foreground shadow-sm">

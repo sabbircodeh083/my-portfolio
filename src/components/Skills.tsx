@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  useEffect,
-  useRef,
-  useState,
-  type KeyboardEvent,
-} from "react";
+import { useRef, useState, type KeyboardEvent } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import { portfolio, skillGroups } from "@/lib/portfolio";
 import { getSkillBrand } from "@/lib/skillIcons";
@@ -35,9 +30,6 @@ export default function Skills() {
 
   const stripRef = useRef<HTMLDivElement>(null);
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
-  // The first render already shows the leading tab, so skip scrolling to avoid
-  // nudging the viewport when the page loads.
-  const skipScrollEffect = useRef(true);
 
   const swipe = useSwipe({
     onSwipe: (direction) => goTo(direction),
@@ -46,20 +38,6 @@ export default function Skills() {
       target instanceof Node && stripRef.current?.contains(target) === true,
   });
 
-  // Keep the selected pill in view on narrow screens.
-  useEffect(() => {
-    if (skipScrollEffect.current) {
-      skipScrollEffect.current = false;
-      return;
-    }
-
-    tabRefs.current[activeIndex]?.scrollIntoView({
-      behavior: prefersReducedMotion() ? "auto" : "smooth",
-      block: "nearest",
-      inline: "nearest",
-    });
-  }, [activeIndex]);
-
   function select(index: number) {
     if (index === activeIndex) return;
 
@@ -67,7 +45,27 @@ export default function Skills() {
     setSlideDirection(index === (activeIndex + 1) % groups.length ? 1 : -1);
     setActiveIndex(index);
     setAnimateList(true);
-    tabRefs.current[index]?.focus();
+    // `preventScroll` keeps focus changes from dragging the page down.
+    tabRefs.current[index]?.focus({ preventScroll: true });
+    scrollTabIntoView(index);
+  }
+
+  /**
+   * Scrolls only the pill strip (never the page) so the selected tab is centred.
+   * Called from user interaction only, so mounting the page never moves it.
+   */
+  function scrollTabIntoView(index: number) {
+    const strip = stripRef.current;
+    const tab = tabRefs.current[index];
+    if (!strip || !tab) return;
+
+    const stripRect = strip.getBoundingClientRect();
+    const tabRect = tab.getBoundingClientRect();
+
+    strip.scrollBy({
+      left: tabRect.left - stripRect.left - (stripRect.width - tabRect.width) / 2,
+      behavior: prefersReducedMotion() ? "auto" : "smooth",
+    });
   }
 
   /** Moves `offset` categories, wrapping at both ends. */

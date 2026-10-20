@@ -166,16 +166,6 @@ section[id] {
   animation: gradient-shift 8s ease infinite;
 }
 
-/* Faint grid that fades out toward the edges, used behind the hero. */
-.bg-grid {
-  background-image:
-    linear-gradient(to right, var(--border) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 10%, transparent 75%);
-  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 10%, transparent 75%);
-}
-
 /* Scroll-reveal, toggled by <Reveal>. */
 .reveal {
   opacity: 0;
