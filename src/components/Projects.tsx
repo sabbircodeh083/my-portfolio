@@ -24,7 +24,9 @@ export default function Projects() {
 
   /** Moves one project, stopping at both ends instead of wrapping. */
   function step(offset: -1 | 1) {
-    setActiveIndex((current) => Math.min(Math.max(current + offset, 0), total - 1));
+    setActiveIndex((current) =>
+      Math.min(Math.max(current + offset, 0), total - 1),
+    );
   }
 
   const swipe = useSwipe({
@@ -88,9 +90,12 @@ export default function Projects() {
                 >
                   {projects.map((project, index) => {
                     const isActive = index === activeIndex;
-                    const features = project.features.slice(0, MAX_FEATURES);
+                    const allFeatures = project.features ?? [];
+                    const features = allFeatures.slice(0, MAX_FEATURES);
+                    const technologies = project.technologies ?? [];
                     const title = project.shortName ?? project.name;
-                    const repositoryUrl = project.githubLink ?? project.repositoryUrl;
+                    const repositoryUrl =
+                      project.githubLink ?? project.repositoryUrl;
 
                     return (
                       <div
@@ -102,7 +107,7 @@ export default function Projects() {
                         <article className="group/card relative h-full overflow-hidden rounded-2xl border border-border bg-card p-6 transition-colors duration-300 hover:border-accent/60 md:p-8">
                           <span
                             aria-hidden
-                            className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-accent via-accent-2 to-accent-3 opacity-0 transition-opacity duration-300 group-hover/card:opacity-100"
+                            className="absolute inset-x-0 top-0 h-1 bg-linear-to-r from-accent via-accent-2 to-accent-3 opacity-0 transition-opacity duration-300 group-hover/card:opacity-100"
                           />
                           <span
                             aria-hidden
@@ -119,7 +124,9 @@ export default function Projects() {
                                 </p>
                               ) : null}
 
-                              <h3 className="mt-2 text-xl font-bold md:text-2xl">{title}</h3>
+                              <h3 className="mt-2 text-xl font-bold md:text-2xl">
+                                {title}
+                              </h3>
 
                               {project.name !== title ? (
                                 <p className="mt-1 text-sm text-muted-foreground">
@@ -132,10 +139,12 @@ export default function Projects() {
                                   "Full details for this project are coming soon."}
                               </p>
 
-                              {((portfolioPreferences.showProjectLiveLinks && project.liveUrl) ||
+                              {((portfolioPreferences.showProjectLiveLinks &&
+                                project.liveUrl) ||
                                 repositoryUrl) && (
                                 <div className="mt-6 flex flex-wrap gap-3 md:mt-auto md:pt-6">
-                                  {portfolioPreferences.showProjectLiveLinks && project.liveUrl ? (
+                                  {portfolioPreferences.showProjectLiveLinks &&
+                                  project.liveUrl ? (
                                     <a
                                       href={project.liveUrl}
                                       target="_blank"
@@ -157,7 +166,10 @@ export default function Projects() {
                                       rel="noopener noreferrer"
                                       className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-semibold transition-colors duration-300 hover:border-accent hover:text-accent"
                                     >
-                                      <FaGithub aria-hidden className="h-4 w-4" />
+                                      <FaGithub
+                                        aria-hidden
+                                        className="h-4 w-4"
+                                      />
                                       Code
                                     </a>
                                   ) : null}
@@ -177,16 +189,17 @@ export default function Projects() {
                                       <span>{feature}</span>
                                     </li>
                                   ))}
-                                  {project.features.length > MAX_FEATURES ? (
+                                  {allFeatures.length > MAX_FEATURES ? (
                                     <li className="text-xs text-muted-foreground/80">
-                                      +{project.features.length - MAX_FEATURES} more features
+                                      +{allFeatures.length - MAX_FEATURES} more
+                                      features
                                     </li>
                                   ) : null}
                                 </ul>
                               ) : null}
 
                               <ul className="mt-5 flex flex-wrap gap-2">
-                                {project.technologies.map((technology) => (
+                                {technologies.map((technology) => (
                                   <li
                                     key={technology}
                                     className="rounded-full bg-muted px-2.5 py-1 text-xs font-medium text-muted-foreground"
@@ -206,7 +219,10 @@ export default function Projects() {
             </div>
 
             <div className="mt-5 flex flex-col items-center gap-1.5">
-              <p aria-live="polite" className="text-sm font-medium text-muted-foreground">
+              <p
+                aria-live="polite"
+                className="text-sm font-medium text-muted-foreground"
+              >
                 {String(activeIndex + 1).padStart(2, "0")}
                 <span className="text-muted-foreground/60">
                   {" / "}

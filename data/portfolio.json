@@ -136,6 +136,58 @@
   },
   "projects": [
     {
+      "id": "chat-application",
+      "name": "Chattrix",
+      "category": "Real-time messaging and communication",
+      "description": "A full-stack real-time one-to-one chat application built with Node.js, Express, MongoDB, EJS, and Socket.IO. It includes secure JWT cookie authentication, instant messaging, image uploads, user search, admin management, and responsive UI.",
+      "liveUrl": "https://chattrix-c8i8.onrender.com/",
+      "githubLink": "https://github.com/sabbircodeh083/chat-application",
+      "repositoryUrl": null,
+      "technologies": [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Mongoose",
+        "EJS",
+        "Socket.IO",
+        "JavaScript",
+        "JWT",
+        "bcrypt",
+        "Multer",
+        "Moment.js",
+        "Toastify",
+        "Render"
+      ],
+      "features": [
+        "Secure email or mobile login with cookie-based JWT authentication",
+        "Real-time one-to-one messaging using Socket.IO",
+        "Search users by name, email, or Bangladeshi mobile number",
+        "Send text messages and up to five image attachments per message",
+        "Create and delete conversations with message history",
+        "Admin-only user management panel",
+        "Avatar upload and validation support",
+        "Responsive EJS-based UI with toast notifications"
+      ],
+      "dataSource": {
+        "type": "MongoDB Database",
+        "url": "MongoDB Atlas / Local MongoDB instance",
+        "notes": "User data, conversations, and messages are stored in MongoDB using Mongoose models."
+      },
+      "stateManagement": {
+        "technology": "Socket.IO + MongoDB persistence",
+        "persistence": "Messages and conversation data are stored in MongoDB and synced in real time across connected clients."
+      },
+      "projectStructure": {
+        "app.js": "Express and Socket.IO server setup",
+        "controller/": "Login, inbox, and admin controllers",
+        "model/": "User, conversation, and message schemas",
+        "router/": "Authentication, inbox, and admin routes",
+        "views/": "EJS pages and UI templates",
+        "public/": "Static assets, styles, and uploaded user files"
+      },
+      "setupCommands": ["npm install", "npm start", "npm run production"]
+    },
+    {
       "id": "bazar-dor",
       "name": "\u09ac\u09be\u099c\u09be\u09b0 \u09a6\u09b0 (BazarDor)",
       "shortName": "BazarDor",
