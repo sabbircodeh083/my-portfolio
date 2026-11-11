@@ -188,6 +188,81 @@
       "setupCommands": ["npm install", "npm start", "npm run production"]
     },
     {
+      "id": "learntest",
+      "name": "LearnTest",
+      "category": "Learning Management and Online Assessment Platform",
+      "description": "An AI-assisted full-stack learning management and assessment platform developed for the Meta Global AI Developer Hackathon. LearnTest connects students with educational content, allowing them to explore videos, questions, playlists, and exams while enabling teachers to create learning materials, evaluate students, manage content, and generate earnings.",
+      "liveUrl": "https://www.easylearntest.tech",
+      "githubLink": "https://github.com/sabbircodeh083/LearnTest",
+      "repositoryUrl": null,
+      "developmentApproach": "AI-assisted development",
+      "technologies": [
+        "Next.js 15",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS 4",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Mongoose",
+        "Better Auth",
+        "SSLCOMMERZ",
+        "REST API",
+        "Git",
+        "Vercel"
+      ],
+      "features": [
+        "Role-based authentication system supporting Students, Teachers, and Admins",
+        "Email/password authentication with email verification and password reset",
+        "Social authentication using Google and GitHub",
+        "Dedicated student dashboard for managing personal learning activities",
+        "Browse and discover educational videos, questions, playlists, and exams",
+        "Watch educational videos with authorization support",
+        "Take online examinations, submit assignments, and view grades and feedback",
+        "Bookmark learning content and follow favorite teachers",
+        "Purchase premium educational content",
+        "Teacher Studio dashboard for content and earnings management",
+        "Create and manage educational videos, questions, exams, and playlists",
+        "Review and grade student examination submissions",
+        "Teacher analytics for views, earnings, and student engagement",
+        "Set prices for premium educational content",
+        "Admin dashboard for user management and role management",
+        "Content moderation, transaction monitoring, and platform analytics",
+        "Teacher payout management and administrative audit logs"
+      ],
+      "dataSource": {
+        "type": "MongoDB Database",
+        "url": "MongoDB Atlas",
+        "notes": "Application data is managed through the backend API and MongoDB using Mongoose."
+      },
+      "stateManagement": {
+        "technology": "React Hooks and Context API",
+        "persistence": "Application data is persisted through the backend REST API and MongoDB. Authentication sessions are managed by Better Auth using secure HttpOnly cookies."
+      },
+      "projectStructure": {
+        "Frontend": {
+          "app/": "Next.js App Router pages for authentication, student dashboard, teacher studio, and admin panel",
+          "components/": "Reusable UI components, cards, dialogs, and video player",
+          "lib/": "API client, authentication context, custom hooks, TypeScript types, and validation utilities",
+          "public/": "Static assets and application resources"
+        },
+        "Backend": {
+          "API": "Express.js REST API",
+          "Database": "MongoDB with Mongoose",
+          "Authentication": "Better Auth",
+          "Payments": "SSLCOMMERZ integration"
+        }
+      },
+      "setupCommands": [
+        "npm install",
+        "npm run dev",
+        "npm run build",
+        "npm run start",
+        "npm run typecheck",
+        "npm run lint"
+      ]
+    },
+    {
       "id": "bazar-dor",
       "name": "\u09ac\u09be\u099c\u09be\u09b0 \u09a6\u09b0 (BazarDor)",
       "shortName": "BazarDor",
