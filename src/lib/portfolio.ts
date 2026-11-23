@@ -50,6 +50,9 @@ export interface Project {
   liveUrl?: string | null;
   githubLink?: string | null;
   repositoryUrl?: string | null;
+  /** Set alongside `backendUrl` when the project is split across two repos. */
+  frontendUrl?: string | null;
+  backendUrl?: string | null;
   /** Optional so a newly added project renders before every detail is filled in. */
   technologies?: string[];
   features?: string[];

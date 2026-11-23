@@ -94,8 +94,15 @@ export default function Projects() {
                     const features = allFeatures.slice(0, MAX_FEATURES);
                     const technologies = project.technologies ?? [];
                     const title = project.shortName ?? project.name;
+                    const frontendRepository = project.frontendUrl ?? null;
+                    const backendRepository = project.backendUrl ?? null;
+                    // Prefer the explicit frontend/backend pair; otherwise fall
+                    // back to a single repository for the whole project.
                     const repositoryUrl =
-                      project.githubLink ?? project.repositoryUrl;
+                      project.githubLink ??
+                      project.repositoryUrl ??
+                      frontendRepository ??
+                      backendRepository;
 
                     return (
                       <div
@@ -159,7 +166,37 @@ export default function Projects() {
                                     </a>
                                   ) : null}
 
-                                  {repositoryUrl ? (
+                                  {frontendRepository &&
+                                  backendRepository ? (
+                                    <div className="inline-flex overflow-hidden rounded-full border border-border text-sm font-semibold">
+                                      <a
+                                        href={frontendRepository}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label={`${title} frontend repository`}
+                                        className="inline-flex items-center gap-2 px-4 py-2 transition-colors duration-300 hover:bg-muted hover:text-accent"
+                                      >
+                                        <FaGithub
+                                          aria-hidden
+                                          className="h-4 w-4"
+                                        />
+                                        Frontend
+                                      </a>
+                                      <a
+                                        href={backendRepository}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label={`${title} backend repository`}
+                                        className="inline-flex items-center gap-2 border-l border-border px-4 py-2 transition-colors duration-300 hover:bg-muted hover:text-accent"
+                                      >
+                                        <FaGithub
+                                          aria-hidden
+                                          className="h-4 w-4"
+                                        />
+                                        Backend
+                                      </a>
+                                    </div>
+                                  ) : repositoryUrl ? (
                                     <a
                                       href={repositoryUrl}
                                       target="_blank"

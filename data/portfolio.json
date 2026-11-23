@@ -188,12 +188,104 @@
       "setupCommands": ["npm install", "npm start", "npm run production"]
     },
     {
+      "id": "commonground",
+      "name": "CommonGround",
+      "category": "Community Volunteering and Social Events Management Platform",
+      "description": "A full-stack community volunteering platform designed to connect event organizers with volunteers. CommonGround enables organizers to create, manage, and monitor volunteering events while allowing participants to discover upcoming opportunities, join events, track their participation, and contribute to community development. The platform includes event capacity management, secure authentication, participant tracking, and responsive interfaces with dark and light themes.",
+      "liveUrl": "https://common-ground-frontend.vercel.app",
+      "githubLink": "https://github.com/sabbircodeh083/Common_Ground_Backend",
+      "frontendUrl": "https://github.com/sabbircodeh083/Common_Ground_Frontend",
+      "backendUrl": "https://github.com/sabbircodeh083/Common_Ground_Backend",
+      "repositoryUrl": null,
+      "developmentApproach": "Full-stack development",
+      "technologies": [
+        "Next.js 16.4",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS 4",
+        "Node.js",
+        "Express.js 5",
+        "MongoDB",
+        "MongoDB Native Driver",
+        "Better Auth",
+        "JWT Authentication",
+        "jose",
+        "Google OAuth",
+        "REST API",
+        "React Toastify",
+        "Font Awesome 7",
+        "Vercel",
+        "Git"
+      ],
+      "features": [
+        "Responsive landing page with hero banner, statistics, recent events carousel, gallery, and newsletter section",
+        "Browse upcoming volunteering events filtered by date and Asia/Dhaka timezone",
+        "Detailed event pages displaying event information, organizer details, and volunteer capacity",
+        "Create volunteering events with rich-text descriptions, image thumbnails, dates, locations, and categories",
+        "Edit and delete events created by organizers",
+        "Join volunteering events with real-time volunteer capacity validation",
+        "Prevent duplicate event registrations",
+        "Concurrency-safe volunteer slot reservation to prevent event overbooking",
+        "Dedicated joined events section for participants",
+        "Leave previously joined events and release reserved volunteer slots",
+        "Dedicated event management dashboard for organizers",
+        "Role-oriented event management for organizers and participants",
+        "Email/password authentication using Better Auth",
+        "Google OAuth authentication",
+        "JWT-based authentication for protected backend API endpoints",
+        "Remote JWKS-based JWT verification using jose",
+        "Secure authorization using Bearer tokens",
+        "Automatic synchronization of event information with participant join records",
+        "Upcoming events listing sorted by nearest event date",
+        "Homepage displaying the six nearest upcoming events",
+        "Dark and light theme with preference persisted in localStorage",
+        "Toast notifications for success and error feedback",
+        "Client-side form validation",
+        "MongoDB database integration for event and participant management",
+        "Serverless backend deployment using Vercel"
+      ],
+      "dataSource": {
+        "type": "MongoDB Database",
+        "url": "MongoDB Atlas",
+        "notes": "The frontend uses MongoDB through Better Auth for authentication data. Event and joined-event data are managed by the Express backend using the official MongoDB Node.js driver. The primary database name is CommonGround."
+      },
+      "stateManagement": {
+        "technology": "React Hooks and Context API",
+        "persistence": "Event and participation data are persisted through the backend REST API and MongoDB. Authentication sessions are managed by Better Auth, with JWT tokens used for authorized backend API requests. Dark and light theme preferences are persisted using localStorage."
+      },
+      "projectStructure": {
+        "Frontend": {
+          "src/app/": "Next.js App Router pages for the landing page, event listing, event details, event creation, event editing, joined events, event management, and authentication",
+          "src/components/": "Reusable UI components, forms, event cards, navigation, providers, and other interface components",
+          "src/lib/": "Better Auth configuration, browser authentication client, JWT token utilities, and API-related helpers",
+          "public/": "Static assets, gallery images, and application resources"
+        },
+        "Backend": {
+          "API": "Express 5 REST API with event management, participant registration, and organizer event endpoints",
+          "Database": "MongoDB using the official MongoDB Node.js driver",
+          "Authentication": "Better Auth JWT verification using jose and remote JWKS",
+          "Middleware": "JWT verification, CORS, and request processing",
+          "Deployment": "Serverless Express application hosted on Vercel"
+        }
+      },
+      "setupCommands": [
+        "npm install",
+        "npm run dev",
+        "npm run build",
+        "npm start",
+        "npm run lint",
+        "npx next typegen && npx tsc --noEmit"
+      ]
+    },
+    {
       "id": "learntest",
       "name": "LearnTest",
       "category": "Learning Management and Online Assessment Platform",
       "description": "An AI-assisted full-stack learning management and assessment platform developed for the Meta Global AI Developer Hackathon. LearnTest connects students with educational content, allowing them to explore videos, questions, playlists, and exams while enabling teachers to create learning materials, evaluate students, manage content, and generate earnings.",
       "liveUrl": "https://www.easylearntest.tech",
       "githubLink": "https://github.com/sabbircodeh083/LearnTest",
+      "frontendUrl": "https://github.com/sabbircodeh083/learntest-frontend",
+      "backendUrl": "https://github.com/sabbircodeh083/learntest-backend-api",
       "repositoryUrl": null,
       "developmentApproach": "AI-assisted development",
       "technologies": [
@@ -322,55 +414,6 @@
         "npm run dev",
         "npm run build",
         "npm run start"
-      ]
-    },
-    {
-      "id": "fitlog",
-      "name": "FitLog",
-      "category": "Workout planner and exercise management",
-      "description": "A workout planner for browsing exercises and organizing a daily routine. Users can review exercise details, add exercises to today's plan, save exercises for later, and track estimated workout time and calories.",
-      "liveUrl": "https://fitlog-rho-flame.vercel.app/",
-      "githubLink": "https://github.com/sabbircodeh083/fitlog",
-      "repositoryUrl": null,
-      "technologies": [
-        "Next.js",
-        "React",
-        "JavaScript",
-        "JSX",
-        "Tailwind CSS",
-        "DaisyUI",
-        "React Toastify",
-        "Vercel"
-      ],
-      "features": [
-        "Browse an exercise library with descriptions, instructions, equipment, difficulty, sets, reps, duration, calories, and ratings",
-        "Add exercises to today's plan",
-        "Save exercises for later",
-        "View exercise totals, calorie totals, and total duration for the selected list",
-        "Sort planned and saved exercises by duration, calories, or rating",
-        "Remove exercises from either list",
-        "Display toast notifications for list actions"
-      ],
-      "dataSource": {
-        "type": "External API",
-        "url": "https://api.abcz.workers.dev/api/fitlog",
-        "notes": "The README states that the app does not currently have a local exercise database."
-      },
-      "stateManagement": {
-        "technology": "React Context",
-        "persistence": "Plan and saved-list data remain in memory while the application is running and are not persisted across page reloads."
-      },
-      "projectStructure": {
-        "src/app/": "App Router pages and global styles",
-        "src/components/": "Exercise, plan, navigation, and footer components",
-        "src/Contexts/": "Shared exercise-plan state"
-      },
-      "setupCommands": [
-        "npm install",
-        "npm run dev",
-        "npm run build",
-        "npm start",
-        "npm run lint"
       ]
     }
   ],
